@@ -1,4 +1,6 @@
-function loadAllItems() {
+var funs = {
+    fun1: function loadAllItems()
+ {
     return [
         {
             barcode: 'ITEM000000',
@@ -37,9 +39,9 @@ function loadAllItems() {
             price: 4.50
         }
     ];
-}
+},
 
-function loadPromotions() {
+    fun2: function loadPromotions() {
     return [
         {
             type: 'BUY_TWO_GET_ONE_FREE',
@@ -49,5 +51,9 @@ function loadPromotions() {
                 'ITEM000005'
             ]
         }
-    ];
-}
+        ];
+    }
+};
+
+module.exports = funs;
+// js一个文件只能抛出一个对象！因此若要抛出多个对象的时候，要先把js文件里的函数整理到一个模块里
